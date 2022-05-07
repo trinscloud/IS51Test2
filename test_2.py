@@ -42,3 +42,33 @@ print percentage of grades above average
 
 
 """
+
+# Python code
+infile = open("Final.txt", 'r')
+grades = [line.rstrip() for line in infile]
+infile.close()
+
+for i in range(len(grades)):
+    grades[i] = int(grades[i])
+
+# solve for grade average by finding sum of total grades and dividing by amount of grades in the class
+grade_average = sum(grades)/len(grades)
+
+
+def calculate_percent_above_average():
+    # program determines whether grade being checked is greater than the average grade, then counter variable will be incremented by 1
+    counter = 0    #placeholder variable for grades that are above average
+    for grade in grades:
+        if grade > grade_average:
+            counter += 1
+
+    # calculates percentage of grades that are above the average grade
+    return 100*(counter/len(grades))
+
+
+def main():
+    print("Number of grades: ", len(grades))
+    print("Average grade: ", grade_average)
+    print("Percentage of grades above average:  {0:.2f}%".format(calculate_percent_above_average()))
+
+
