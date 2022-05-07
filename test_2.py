@@ -26,16 +26,18 @@ change grades at variable i to int
 
 grade_average = sum of total grade / # of grades in list
 initialize grade_average by dividing sum of the grade  and # of grades in list
-counter = 0   # placeholder for the numbers of grades that are above the average grade
 
 
 #Find the amount of grades that are above average
+initialize calculate_percent_above_average() function
+
+counter = 0   # placeholder for the numbers of grades that are above the average grade
 for every grade in grades
     if grade is greater than grade_average
     increment counter by 1
+return 100*(counter/number of total grades)
 
-set grades_above_avg to: counter divided by total # of grades in the list, multiply by 100 to get percentage value
-
+initialize main function
 print total amount of grades
 print average grade
 print percentage of grades above average
