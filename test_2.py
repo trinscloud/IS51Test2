@@ -25,6 +25,7 @@ for items in Final.txt
 change grades at variable i to int
 
 grade_average = sum of total grade / # of grades in list
+
 initialize grade_average by dividing sum of the grade  and # of grades in list
 counter = 0   # placeholder for the numbers of grades that are above the average grade
 
